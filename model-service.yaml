@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: model
-          image: gcr.io/vcc-m23csa521/model-service
+          image: model-service
           ports:
             - containerPort: 5000
 ---
