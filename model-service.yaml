@@ -16,6 +16,7 @@ spec:
       containers:
         - name: model
           image: model-service:latest
+          imagePullPolicy: Never
           ports:
             - containerPort: 5000
 ---
