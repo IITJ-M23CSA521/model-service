@@ -10,7 +10,7 @@ def home():
 
 @app.route('/predict')
 def predict():
-    return jsonify({"recommended_pods": random.randint(2, 5)})
+    return jsonify({"replicas": random.randint(2, 5)})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
