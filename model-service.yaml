@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: model
-          image: gcr.io/YOUR_PROJECT_ID/model-service
+          image: gcr.io/vcc-m23csa521/model-service
           ports:
             - containerPort: 5000
 ---
@@ -24,11 +24,9 @@ kind: Service
 metadata:
   name: model-service
 spec:
-  type: NodePort
   selector:
     app: model-service
   ports:
     - protocol: TCP
       port: 80
       targetPort: 5000
-      nodePort: 30007
